@@ -65,22 +65,4 @@ info.addEventListener("click", ()=>{
     second.style.opacity = "100%"
     second.style.marginLeft = '0px'
 })
-function page_switch(info1,main1){
-    info1.style.background =  "white"
-    info1.style.color =  "#F17720"
-    main1.style.background =  "#F17720"
-    main1.style.color = "white"
-    games.style.background =  "#F17720"
-    games.style.color = "white"
-    page.style.left = "1175px"
-    document.body.style.background = "#FFA630"
-    page.style.background = "#FFA630"
-    page.style.boxShadow = "inset 10px 20px 40px #F17720"
-    header.style.boxShadow = "10px 5px 100px #431C75"
-    first.style.opacity = "0%"
-    first.style.marginLeft = '-500px'
-    third.style.opacity = "0%"
-    third.style.marginLeft = '-500px'
-    second.style.opacity = "100%"
-    second.style.marginLeft = '0px'
-}
+
