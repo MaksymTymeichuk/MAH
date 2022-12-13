@@ -42,7 +42,9 @@ body{
 
 }
 .letter_info{
-    display:none;
+    display:flex;
+    visibility:hidden;
+    position:absolute;
     justify-content: space-evenly;
     flex-wrap:wrap;
     width: 100%;

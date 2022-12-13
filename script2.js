@@ -3,15 +3,19 @@ arr = document.getElementsByClassName('text'),
 block_arr = document.getElementsByClassName("letter"),
 counter = 0,
 img_arr = ["agrus.jpg"],
-letter_info1 = document.getElementById("letter_info").addEventListener("click",letter_info(arr[0],img_arr[0]))
+letter_info1 = document.getElementById("letter_info")
 for(let i=0;i<=33;i++){
     arr[i].innerText = letter_arr[i]
+    block_arr[i].addEventListener("click",()=>{
+        for(let g=0;g<=33;g++){
+        block_arr[g].style.display = "none"
+        }
+        letter_info1.style.visibility = 'visible'
+    })
 }
 function letter_info(letter,img){
-    for(let i =0;i>=arr.length;i++){
-        block_arr[0].textContent = "s"
-    }
     letter_info1.style.display = 'flex'
 }
+
     
 
