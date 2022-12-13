@@ -66,3 +66,4 @@ info.addEventListener("click", ()=>{
     second.style.marginLeft = '0px'
 })
 
+
