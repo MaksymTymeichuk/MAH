@@ -6,14 +6,20 @@ header = document.getElementById("header")
 first = document.getElementById("first")
 second = document.getElementById("second")
 third = document.getElementById("third")
+
+var audio2 = new Audio('background.mp3');
+audio2.play();
 main.addEventListener("click", ()=>{
+    var audio = new Audio('music.mp3');
+    audio.play();
+    
     main.style.background =  "rgb(50,92,253)"
     main.style.color =  "#003459"
     games.style.background =  "#003459"
     games.style.color = "#EAA221"
     info.style.background =  "#003459"
     info.style.color = "#EAA221"
-    page.style.left = "133.5vh"
+
     document.body.style.background = "#325CFD"
     page.style.background = "rgb(50,92,253)"
     page.style.boxShadow = "inset 10px 10px 100px #003459"
@@ -28,13 +34,15 @@ main.addEventListener("click", ()=>{
     
 })
 games.addEventListener("click", ()=>{
+    var audio = new Audio('music.mp3');
+    audio.play();
     games.style.background =  "violet"
     games.style.color =  "#663B94"
     main.style.background =  "#431C75"
     main.style.color = "violet"
     info.style.background =  "#431C75"
     info.style.color = "violet"
-    page.style.left = "178.5vh"
+    
     document.body.style.background = "#663B94"
     page.style.background = "#663B94"
     page.style.boxShadow = "inset 10px 20px 40px #431C75"
@@ -47,13 +55,15 @@ games.addEventListener("click", ()=>{
     third.style.marginLeft = '0px'
 })
 info.addEventListener("click", ()=>{
+    var audio = new Audio('music.mp3');
+    audio.play();
     info.style.background =  "white"
     info.style.color =  "#F17720"
     main.style.background =  "#F17720"
     main.style.color = "white"
     games.style.background =  "#F17720"
     games.style.color = "white"
-    page.style.left = "156vh"
+
     document.body.style.background = "#FFA630"
     page.style.background = "#FFA630"
     page.style.boxShadow = "inset 10px 20px 40px #F17720"

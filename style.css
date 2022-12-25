@@ -47,8 +47,8 @@ body{
     position:absolute;
     transition:0.5s all;
     height: 13vh;
-    width: 7vw;
-    left:133.5vh;
+    width: 35vw;
+    align-self:flex-end;
     background: rgb(50,92,253);
     box-shadow:inset 10px 10px 100px #003459;
 
