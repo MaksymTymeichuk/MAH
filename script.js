@@ -6,11 +6,28 @@ header = document.getElementById("header")
 first = document.getElementById("first")
 second = document.getElementById("second")
 third = document.getElementById("third")
+var rupor = document.getElementById("rupor")
+    var audio2 = new Audio('background.mp3');
+    audio2.play();
 
-var audio2 = new Audio('background.mp3');
-audio2.play();
+var count = true
+rupor.addEventListener("click",()=>{
+    if(count){
+        audio2.pause();
+        count = false
+        rupor.style.background = "black"
+    }
+    else{
+        audio2.play();
+        count = true
+        rupor.style.background = "white"
+    }
+    })
+   
+
+
 main.addEventListener("click", ()=>{
-    var audio = new Audio('music.mp3');
+    var audio = new Audio('swap.wav');
     audio.play();
     
     main.style.background =  "rgb(50,92,253)"
@@ -34,7 +51,7 @@ main.addEventListener("click", ()=>{
     
 })
 games.addEventListener("click", ()=>{
-    var audio = new Audio('music.mp3');
+    var audio = new Audio('swap.wav');
     audio.play();
     games.style.background =  "violet"
     games.style.color =  "#663B94"
@@ -55,7 +72,7 @@ games.addEventListener("click", ()=>{
     third.style.marginLeft = '0px'
 })
 info.addEventListener("click", ()=>{
-    var audio = new Audio('music.mp3');
+    var audio = new Audio('swap.wav');
     audio.play();
     info.style.background =  "white"
     info.style.color =  "#F17720"
