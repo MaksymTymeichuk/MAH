@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
 body{
     display:flex;
     justify-content: center;
@@ -9,18 +9,19 @@ body{
 }
 .main_container{
     display:flex;
-    
+    position:absolute;
     flex-wrap:wrap;
     justify-content: space-around;
     margin: 0 auto;
     width: 100%;
-    height: 1000px;
+    height: 3400px;
     gap: 20px 20px;
 }
 .letter{
     display:flex;
     justify-content:center;
     align-items:center;
+    transition:1s all;
     justify-content: center;
     margin-top:10px;
     width: 340px;
@@ -31,7 +32,7 @@ body{
     background: #A460ED;
     cursor:pointer;
     opacity:100%;
-    transition: margin-top 2s, opacity 1s;
+    transition: 1s all;
 }
 .letter:hover{
     background:linear-gradient(white, #7DBFE2)
@@ -145,12 +146,80 @@ cursor:pointer;
 }
 
 .sign1{
-    position:absolute;
-    top:65vh;
-    left:30vh;
+ 
     cursor:pointer;
     width: 50vh;
+    align-self:flex-end;
     height: 50vh;
     font-size:7vh;
     
+}
+.rupor{
+    position:sticky;
+    top:90vh;
+    right:60vh; 
+    cursor:pointer;
+    width: 70px;
+    height: 70px;
+    background: white;
+    margin:10px;    
+    border-radius:10px;
+
+}
+.main1{
+   
+
+    width: 100vw;
+    height: 3400px;
+}
+.footer{
+    display:flex;
+    justify-content:space-around;
+    position:sticky;
+    z-index:5;
+    top:88vh;
+    width: 100vh;
+    border-top:solid sandybrown 5px;
+    border-left:solid sandybrown 5px;
+    border-right:solid sandybrown 5px;          
+    height: 12vh;
+    background-image: linear-gradient(#89C4E1,#58287F);
+    margin: 0 auto;
+    color:white;
+z-index:5;
+    font-family: 'Ultra', serif;
+    font-size: 8vh;
+    text-shadow: 5px 5px orange;
+}
+.instr{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 70px;
+    height: 70px;
+    color:white;
+    font-size:30px;
+    align-self:center;
+    text-shadow:none;
+    border-radius:10px;
+    background: #58287F;
+  cursor:pointer
+}
+.help_menu{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:#F8F2AA;
+    z-index:5;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow: 20px 20px 10px black;
+    font-size:30px;
+    background: #FDAF17;
+    height: 70vh;
+    color:#FDAF17;
+    width: 0px;
+    font-family: 'Seymour One', sans-serif;
+    margin:0 auto;
+    transition:1s all;
 }

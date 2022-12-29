@@ -9,15 +9,58 @@ letter_icon = document.getElementById("letter_icon"),
 letter_img = document.getElementById("letter_img"),
 img_name = document.getElementById("img_name"),
 back_button = document.getElementById("back"),
-main1 = document.getElementById("main_container")
+main1 = document.getElementById("main_container"),
+rupor = document.getElementById("rupor"),
+thing = document.getElementById("thing"),
+instr = document.getElementById("instr"),
+help = document.getElementById("help"),
+help_count = true
 
 back_button.addEventListener("click",letter_info_hide)
 
+instr.addEventListener("click",()=>{
+    if(help_count){
+        main1.style.zIndex = "-1"
+        help_count = false
+        help.style.width = "60vw"
+    setTimeout(() => {  help.style.color = "white" }, 1000);
+    
+    }
+    else{
+        
+        help_count = true
+        help.style.color = "#FDAF17" 
+        setTimeout(() => {  help.style.width = "0vw"
+    }, 1000);
+    setTimeout(() => { 
+        main1.style.zIndex = "3"
+    }, 2000);
+        
+    }
+    
+    
+})
+var audio2 = new Audio('background.mp3');
+audio2.play();
+
+var count = true
+rupor.addEventListener("click",()=>{
+    if(count){
+        audio2.pause();
+        count = false
+        rupor.style.background = "black"
+    }
+    else{
+        audio2.play();
+        count = true
+        rupor.style.background = "white"
+    }
+    })
 
 
 
 function letter_info_hide(){
-    
+    thing.style.height = "3400px"
     letter_info1.style.opacity = '0%'
     letter_info1.style.display = 'none'
     for(let g=0;g<=33;g++){
@@ -40,6 +83,7 @@ function letter_info_show(){
     audio.play();
     letter_info1.style.opacity = '100%'
     letter_info1.style.display = "flex"
+    thing.style.height = "100vh"
     main1.style.height = "50vh"
     
     letter_icon.innerText = letter_arr[letter_arr.indexOf(this.innerText)]
@@ -50,6 +94,8 @@ function letter_info_show(){
     }
     
 }
+
+
 
 
 
