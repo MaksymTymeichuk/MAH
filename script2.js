@@ -14,9 +14,19 @@ rupor = document.getElementById("rupor"),
 thing = document.getElementById("thing"),
 instr = document.getElementById("instr"),
 help = document.getElementById("help"),
-help_count = true
+help_count = true,
+lock = document.getElementById("lock"),
+black_screen = document.getElementById("black_screen"),
+gol_arr = ['Аа','Ее','Єє','Ии','Іі','Її','Оо','Уу','Юю','Яя']
+
 
 back_button.addEventListener("click",letter_info_hide)
+if(localStorage.getItem("letter")==false){
+    localStorage.setItem("letter","Аа,")
+}
+
+let letterstorage = localStorage.getItem("letter")
+console.log(letterstorage)
 
 instr.addEventListener("click",()=>{
     if(help_count){
@@ -65,7 +75,28 @@ function letter_info_hide(){
     letter_info1.style.display = 'none'
     for(let g=0;g<=33;g++){
         block_arr[g].style.display = "flex"
+        if(letterstorage.includes(arr[g].innerText)){
+            arr[g].style.opacity = "100%"
+            block_arr[g].style.pointerEvents = "all"
+          black_screen.style.opacity = "50%"
+          black_screen.style.height = "3400px"
+          black_screen.style.zIndex = "10"
+          setTimeout(() => { 
+            lock.style.opacity = "100%"
+          lock.style.zIndex = "12" 
+          lock.style.height = "3400px"
+        }, 1000);
+        setTimeout(() => { 
+            black_screen.style.opacity = "0%"
+          black_screen.style.height = "0px"
+          black_screen.style.zIndex = "-2"
+            lock.style.opacity = "0%"
+          lock.style.zIndex = "-2" 
+          lock.style.height = "0px"
+        }, 3000);
+        }
     }
+    
 }
 
 
@@ -73,6 +104,14 @@ function letter_info_hide(){
 
 for(let i=0;i<=33;i++){
     arr[i].innerText = letter_arr[i]
+    if(letterstorage.includes(arr[i].innerText)==false){
+        arr[i].style.opacity = "50%"
+        block_arr[i].style.pointerEvents = "none"
+    }
+    if(gol_arr.includes(arr[i].innerText)){
+        
+        arr[i].style.color = 'red'
+    }
     block_arr[i].addEventListener("click",letter_info_show)
 }
 
@@ -85,7 +124,8 @@ function letter_info_show(){
     letter_info1.style.display = "flex"
     thing.style.height = "100vh"
     main1.style.height = "50vh"
-    
+    letterstorage += letter_arr[letter_arr.indexOf(this.innerText)+1]+','
+    localStorage.setItem("letter",letterstorage)
     letter_icon.innerText = letter_arr[letter_arr.indexOf(this.innerText)]
     letter_img.src = img_arr[letter_arr.indexOf(this.innerText)]
     img_name.innerText = info_arr[letter_arr.indexOf(this.innerText)]
