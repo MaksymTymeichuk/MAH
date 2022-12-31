@@ -78,7 +78,9 @@ function letter_info_hide(){
         if(letterstorage.includes(arr[g].innerText)){
             arr[g].style.opacity = "100%"
             block_arr[g].style.pointerEvents = "all"
-          black_screen.style.opacity = "50%"
+        }
+        else if(letterstorage.includes(arr[g+1].innerText)==false){
+            black_screen.style.opacity = "50%"
           black_screen.style.height = "3400px"
           black_screen.style.zIndex = "10"
           setTimeout(() => { 
