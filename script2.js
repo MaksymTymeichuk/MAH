@@ -31,9 +31,7 @@ back_button.addEventListener("click",letter_info_hide)
 if(localStorage.getItem("letter")==false){
     localStorage.setItem("letter","Аа,")
 }
-if(letterstorage.length==0){
-    localStorage.setItem("letter","Аа,")
-}
+
 letterstorage = localStorage.getItem("letter")
 console.log(letterstorage)
 
