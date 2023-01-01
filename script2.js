@@ -2,6 +2,11 @@ let letter_arr = ['Аа','Бб','Вв','Гг','Ґґ','Дд','Ее','Єє','Жж'
 arr = document.getElementsByClassName('text'),
 block_arr = document.getElementsByClassName("letter"),
 counter = 0,
+img_counter = 0,
+right = document.getElementById("rightturn"),
+left = document.getElementById("leftturn"),
+letter_info_arr = [["car.gif","orange.gif","shark.gif"]],
+letter_info_arr2 = [["Автомобіль","Апельсин","Акула"]]
 img_arr = ["car.gif","bull.gif","bear.gif","goose.gif","crow.gif","dolphin.gif","straus.gif","racoon.gif"],
 info_arr = ["Автомобіль","Бик","Ведмідь","Гусак","Ґава","Дельфін","Ему","Єнот","Жираф","Заєць","рИба","Індик","Їжак","Йогурт","Корова","Лимон","Миша","Ножиці","Окуляри","Папуга","Равлик","Сир","Тигр","Удав","Фарби","Хом'як","Цукерка","Черевик","Шапка","Щука","КінЬ","Юнга","Яблуко"],
 letter_info1 = document.getElementById("letter_info"),
@@ -16,10 +21,10 @@ instr = document.getElementById("instr"),
 help = document.getElementById("help"),
 help_count = true,
 is_new = false,
+index = 0,
 lock = document.getElementById("lock"),
 black_screen = document.getElementById("black_screen"),
 gol_arr = ['Аа','Ее','Єє','Ии','Іі','Її','Оо','Уу','Юю','Яя']
-
 
 back_button.addEventListener("click",letter_info_hide)
 if(localStorage.getItem("letter")==false){
@@ -71,10 +76,11 @@ rupor.addEventListener("click",()=>{
 
 
 function letter_info_hide(){
+    document.body.scrollTop = "100px"
     thing.style.height = "3400px"
     letter_info1.style.opacity = '0%'
     letter_info1.style.display = 'none'
-    for(let g=0;g<=33;g++){
+    for(let g=0;g<=32;g++){
         block_arr[g].style.display = "flex"
         if(letterstorage.includes(arr[g].innerText)){
             arr[g].style.opacity = "100%"
@@ -106,7 +112,7 @@ function letter_info_hide(){
 
 
 
-for(let i=0;i<=33;i++){
+for(let i=0;i<=32;i++){
     arr[i].innerText = letter_arr[i]
     if(letterstorage.includes(arr[i].innerText)==false){
         arr[i].style.opacity = "50%"
@@ -142,6 +148,8 @@ function letter_info_show(){
     letter_info1.style.display = "flex"
     thing.style.height = "100vh"
     main1.style.height = "50vh"
+    index = letter_arr.indexOf(this.innerText)
+    console.log(index)
     if(letterstorage.includes(letter_arr[letter_arr.indexOf(this.innerText)+1])==false){
         letterstorage += letter_arr[letter_arr.indexOf(this.innerText)+1]+','
         localStorage.setItem("letter",letterstorage)
@@ -151,7 +159,7 @@ function letter_info_show(){
     letter_icon.innerText = letter_arr[letter_arr.indexOf(this.innerText)]
     letter_img.src = img_arr[letter_arr.indexOf(this.innerText)]
     img_name.innerText = info_arr[letter_arr.indexOf(this.innerText)]
-    for(let g=0;g<=33;g++){
+    for(let g=0;g<=32;g++){
         block_arr[g].style.display = "none"
     }
     
@@ -159,8 +167,30 @@ function letter_info_show(){
 
 
 
+right.addEventListener("click",turn_right)
 
+function turn_right(){
+    let pop = new Audio("pop.wav")
+    pop.play()
+    img_counter +=1
+    if(img_counter>2){
+        img_counter = 0
+    }
+    console.log("working")
+    letter_img.src = letter_info_arr[index][img_counter]
+    img_name.innerText =letter_info_arr2[index][img_counter]
+}
 
+left.addEventListener("click",turn_left)
 
- 
-
+function turn_left(){
+    let pop = new Audio("pop.wav")
+    pop.play()
+    img_counter -=1
+    if(img_counter<0){
+        img_counter = 2
+    }
+    console.log("working")
+    letter_img.src = letter_info_arr[index][img_counter]
+    img_name.innerText =letter_info_arr2[index][img_counter]
+}
