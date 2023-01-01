@@ -3,6 +3,7 @@ arr = document.getElementsByClassName('text'),
 block_arr = document.getElementsByClassName("letter"),
 counter = 0,
 img_counter = 0,
+letterstorage = '',
 right = document.getElementById("rightturn"),
 left = document.getElementById("leftturn"),
 letter_info_arr = [["car.gif","orange.gif","shark.gif"]],
@@ -33,7 +34,7 @@ if(localStorage.getItem("letter")==false){
 if(letterstorage.length==0){
     localStorage.setItem("letter","Аа,")
 }
-let letterstorage = localStorage.getItem("letter")
+letterstorage = localStorage.getItem("letter")
 console.log(letterstorage)
 
 instr.addEventListener("click",()=>{
