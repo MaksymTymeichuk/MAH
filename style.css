@@ -14,7 +14,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:flex-end;
-    background-image: linear-gradient(blue, #4000F0);
+    background-image: linear-gradient(red, #4000F0);
     width: 100%;
     height: 13vh;
 
