@@ -6,10 +6,10 @@ img_counter = 0,
 letterstorage = '',
 right = document.getElementById("rightturn"),
 left = document.getElementById("leftturn"),
-letter_info_arr = [["car.gif","orange.gif","shark.gif"]],
-letter_info_arr2 = [["Автомобіль","Апельсин","Акула"]]
-img_arr = ["car.gif","bull.gif","bear.gif","goose.gif","crow.gif","dolphin.gif","straus.gif","racoon.gif"],
-info_arr = ["Автомобіль","Бик","Ведмідь","Гусак","Ґава","Дельфін","Ему","Єнот","Жираф","Заєць","рИба","Індик","Їжак","Йогурт","Корова","Лимон","Миша","Ножиці","Окуляри","Папуга","Равлик","Сир","Тигр","Удав","Фарби","Хом'як","Цукерка","Черевик","Шапка","Щука","КінЬ","Юнга","Яблуко"],
+letter_info_arr = [["car.gif","orange.gif","shark.gif"],["bull.gif","banana.gif","borsuk.gif"],["bear.gif","grape.gif","rainbow.gif"],["goose.gif","guitar.gif","pumpkin.gif"],[],["dolphin.gif","house.gif","dini.gif"],[],["racoon.gif","unicorn.gif","Egypt.gif"],["gyraph.gif","frog.gif","acorn.gif"],["bunny.gif","zebra.gif","castle.gif"],["fish.gif","tiger.gif","whale.gif"],["turkey.gif","toy.gif","iguana.gif"],["hedgehog.gif","food.jpg","Ukraine.gif"],["yogurt.jpg","koyot.gif","tea.gif"],["cow.gif","wheel.gif","wing.gif"],["lemon.gif","lamp.gif","lastivka.jpg"],["mouse.gif","ball.gif","carrot.jpg"],["noh.jpg","rhino.gif","sky.gif"],["glasses.jpg","deer.gif","cucumber.jpg"],["parrot.gif","sand.gif","tomato.gif"],["snail.gif","rocket.gif","backpack.gif"],["chesse.jpg","dog.jpg","pig.jpg"],["tv.gif","tiger.gif","cake.jpg"],["boa.gif","smile.gif","Ukraine.gif"],["paint.gif","fountain.gif","van.gif"],["humster.jpg","hockey.gif","bread.gif"],["candy.gif","puppy.gif","onion.gif"],["boot.gif","turtle.gif","cup.gif"],["chess.gif","hat.gif","cone.gif"],["rat.jpg","shield.jpg","brush.gif"],["horse.gif","pepper.jpg","balloon.gif"],["jupiter.gif"],["apple.gif","lizard.gif","egg.jpg"]],
+letter_info_arr2 = [["Автомобіль","Апельсин","Акула"],["Бик","Банан","Борсук"],["Ведмідь","Виноград","Веселка"],["Гусак","Гітара","Гарбуз"],[],["Дельфін","Дім","Динозавр"],[],["Єнот","Єдиноріг","Єгипет"],["Жираф","Жаба","Жолудь"],["Заєць","Зебра","Замок"],["рИба","тИгр","кИт"],["Індик","Іграшка","Ігуана"],["Їжак","Їжа","УкраЇна"],["Йогурт","коЙот","чаЙ"],["Корова","Колесо","Крило"],["Лимон","Лампа","Ластівка"],["Миша","М'яч","Морква"],["Ножиці","Носоріг","Небо"],["Окуляри","Олень","Огірок"],["Папуга","Пісок","Помідор"],["Равлик","Ракета","Рюкзак"],["Сир","Собака","Свиня"],["Телевізор","Тигр","Торт"],["Удав","Усмішка","Україна"],["Фарби","Фонтан","Фургон"],["Хом'як","Хокей","Хліб"],["Цукерка","Цуценя","Цибуля"],["Чоботи","Черепаха","Чашка"],["Шахи","Шапка","Шишка"],["Щур","Щит","Щітка"],["кінЬ","перецЬ","Кулька"],["Юпітер"],["Яблуко","Ящірка","Яйце"]]
+img_arr = ["car.gif","bull.gif","bear.gif","goose.gif","crow.gif","dolphin.gif","straus.gif","racoon.gif","gyraph.gif","bunny.gif","fish.gif","turkey.gif","hedgehog.gif","yogurt.jpg","cow.gif","lemon.gif","mouse.gif","noh.jpg","glasses.jpg","parrot.gif","snail.gif","chesse.jpg","tv.gif","boa.gif","paint.gif","humster.jpg","candy.gif","boot.gif","chess.gif","rat.jpg","horse.gif","jupiter.gif","apple.gif"],
+info_arr = ["Автомобіль","Бик","Ведмідь","Гусак","Ґава","Дельфін","Ему","Єнот","Жираф","Заєць","рИба","Індик","Їжак","Йогурт","Корова","Лимон","Миша","Ножиці","Окуляри","Папуга","Равлик","Сир","Телевізор","Удав","Фарби","Хом'як","Цукерка","Чоботи","Шахи","Щур","кінЬ","Юпітер","Яблуко"],
 letter_info1 = document.getElementById("letter_info"),
 letter_icon = document.getElementById("letter_icon"),
 letter_img = document.getElementById("letter_img"),
@@ -191,7 +191,7 @@ function turn_left(){
     if(img_counter<0){
         img_counter = 2
     }
-    console.log("working")
+    console.log()
     letter_img.src = letter_info_arr[index][img_counter]
     img_name.innerText =letter_info_arr2[index][img_counter]
 }

@@ -1,0 +1,135 @@
+body{
+    display:flex;
+    justify-content:center;
+    background: linear-gradient(#FF8317,#FFC402);
+    width:100vw;
+    margin:0;
+    height: 100vh;
+    overflow:hidden;
+}
+.title{
+    display:flex;
+    justify-content:center;
+    color:white;
+    font-size:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90vw;
+    height: 100px;
+    background: #181D31;
+}
+.main_container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width: 90vw;
+    height: 100vh;
+    
+}
+.game{
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:30px;
+    width: 400px;
+    height: 200px;
+    margin-bottom:20px;
+    background: white;
+    border-radius:25px;
+    cursor:pointer;
+    transition: 1s all;
+    position:sticky;
+
+}
+.game_img1{
+    width: 400px;
+    height: 200px;
+    border-radius:25px;
+}
+.game:hover{
+    box-shadow:10px 10px 50px #181D31;
+    margin-left:-50px;
+    margin-top:-50px;
+    margin-right:50px;
+    margin-bottom:50px;
+}
+.game_container{
+    display:flex;
+    flex-wrap:wrap;
+    padding-top:50px;
+    justify-content:space-around;
+   
+    width: 90vw;
+    height: 80vh;
+}
+.footer{
+    display:flex;
+    justify-content:space-around;
+    position:sticky;
+    position:absolute;
+    z-index:5;
+    top:88vh;
+    width: 100vh;
+    border-top:solid sandybrown 5px;
+    border-left:solid sandybrown 5px;
+    border-right:solid sandybrown 5px;          
+    height: 12vh;
+    background-image: linear-gradient(#89C4E1,#58287F);
+    margin: 0 auto;
+    color:white;
+z-index:5;
+    font-family: 'Ultra', serif;
+    font-size: 6vh;
+    text-shadow: 5px 5px orange;
+}
+.instr{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 70px;
+    height: 70px;
+    color:white;
+    font-size:30px;
+    align-self:center;
+    text-shadow:none;
+    border-radius:10px;
+    background: #58287F;
+  cursor:pointer
+}
+.help_menu{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:#F8F2AA;
+    z-index:5;
+    position:sticky;
+    top:100px;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow: 20px 20px 10px black;
+    font-size:30px;
+    background: #FDAF17;
+    height: 70vh;
+    color:#FDAF17;
+    width: 0px;
+    font-family: 'Seymour One', sans-serif;
+    margin:0 auto;
+    transition:1s all;
+}
+.rupor{
+    background: white;
+    border-radius:25%;
+    cursor:pointer
+}
+.help_menu{
+    position:absolute;
+    background: orange;
+    width: 0px;
+    color:orange;
+    height: 500px;
+    opacity: 0%;
+    z-index:-1;
+    transition:1s all;
+}
