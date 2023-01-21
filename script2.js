@@ -28,7 +28,7 @@ black_screen = document.getElementById("black_screen"),
 gol_arr = ['Аа','Ее','Єє','Ии','Іі','Її','Оо','Уу','Юю','Яя']
 
 back_button.addEventListener("click",letter_info_hide)
-if(localStorage.getItem("letter")==false){
+if(localStorage.getItem("letter")==null){
     localStorage.setItem("letter","Аа,")
 }
 
